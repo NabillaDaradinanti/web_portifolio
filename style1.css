@@ -1,0 +1,253 @@
+/* --- Global Variables & Warm Theme --- */
+:root {
+    --primary-color: #ff70a6;
+    /* Soft Pink Coral */
+    --primary-hover: #ff5293;
+    --accent-color: #ff97b7;
+    --light-bg: #fffbfd;
+    --dark-bg: #22252a;
+    /* Warm Charcoal Dark Footer */
+    --text-dark: #2d3748;
+    --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    padding-top: 65px;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Custom Text Helpers */
+.text-justify {
+    text-align: justify;
+    hyphens: auto;
+}
+
+.text-coral {
+    color: var(--primary-color) !important;
+}
+
+.bg-pink-soft {
+    background-color: #ffeef4;
+}
+
+.text-purple {
+    color: #7952b3 !important;
+}
+
+/* --- Brand Logo & Badges --- */
+.brand-badge {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--primary-color);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Hero / Jumbotron Section --- */
+.jumbotron {
+    background: linear-gradient(135deg, #ff70a6 0%, #ff8fa3 100%);
+    padding: 80px 0 40px 0;
+}
+
+.style-subtitle {
+    max-width: 600px;
+}
+
+.profile-img {
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.85);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+.btn-chill {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-chill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-chill-outline {
+    border-color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.2s ease;
+}
+
+.btn-chill-outline:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.wave-container {
+    background-color: #ffffff;
+    margin-top: -2px;
+}
+
+.wave-container svg {
+    display: block;
+}
+
+/* --- Sections & Titles --- */
+.bg-light-custom {
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    font-weight: 800;
+    color: var(--text-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* --- Skill Progress Bars --- */
+.progress-bar-custom {
+    background-color: var(--primary-color);
+}
+
+/* --- Cards & Overlay Effects --- */
+.about-card,
+.skill-badge-card,
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover,
+.skill-badge-card:hover,
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card-img-wrapper img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-img-overlay-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-img-wrapper:hover .card-img-overlay-custom {
+    opacity: 1;
+}
+
+/* --- Footer --- */
+.footer-modern {
+    background-color: #ff70a6;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.btn-top {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.btn-top:hover {
+    color: var(--primary-color);
+}
+
+.brand-text-gradient {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #b0d1f4 60%, #f1649a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.3s ease;
+}
+
+.brand-dot {
+    background: linear-gradient(135deg, #ffd166 0%, #f72585 100%);
+    -webkit-background-clip:#f0aecc ;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-brand:hover .brand-text-gradient {
+    opacity: 0.9;
+}
